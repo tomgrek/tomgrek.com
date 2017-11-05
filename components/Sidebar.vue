@@ -2,8 +2,15 @@
   <div>
     <ul class="sidelinks">
       <li><nuxt-link to="/">Home</nuxt-link></li>
+      <li><a href="https://git.tomgrek.com" target="_blank">
+        <i class="fa fa-gitlab" aria-hidden="true" style="color: inherit; line-height: inherit;"></i>Private Git
+      </a></li>
+      <li><a href="http://tomgrek.com:8888" target="_blank">
+        <i class="fa fa-database" aria-hidden="true" style="color: inherit; line-height: inherit;"></i>
+        Jupyter NB</a></li>
       <li><nuxt-link to="/about">About</nuxt-link></li>
       <li><nuxt-link to="/TIL">TIL</nuxt-link></li>
+      <li><nuxt-link to="/posts">Long Form</nuxt-link></li>
       <li v-for="tag in hashtags" class="tag">
         <nuxt-link :to="`/tag/${tag.tag}`">{{tag.tag}}</nuxt-link>
       </li>
@@ -19,6 +26,7 @@ export default {
   data() {
     return {
       hashtags: [],
+      posttags: [],
     };
   },
   async mounted() {
@@ -29,6 +37,16 @@ export default {
       if (a > b) return 1; if (a < b) return -1;
       return 0;
     });
+    let posts = await axios.get('/api/mediumposts');
+    if (!posts.data || !posts.data.map) return;
+    let posttags = posts.data.map(x => {
+      return x.tags;
+    });
+    let posttagsSet = new Set();
+    posttags.map(x => {
+      posttagsSet.add(x);
+    });
+    this.posttags = Array.from(posttagsSet);
   },
 };
 </script>

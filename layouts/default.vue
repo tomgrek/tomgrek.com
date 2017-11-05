@@ -1,7 +1,41 @@
 <template>
   <div class="container">
     <div class="top">
-      <span class="header"><nuxt-link to="/">tomgrek.</nuxt-link></span>
+      <span class="header">
+        <nuxt-link to="/">tomgrek.</nuxt-link>
+        <ul style="float: right;">
+          <li>
+            <a href="https://github.com/tomgrek" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/tomgrek" target="_blank">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:tom.grek@gmail.com">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tomgrek/tomgrek.com" target="_blank">
+              <i class="fa fa-code-fork" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/@tomgrek/" target="_blank">
+              <i class="fa fa-medium" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/tomgrek/" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </span>
     </div>
     <div class="content">
       <div class="main">
@@ -25,6 +59,15 @@ export default {
 </script>
 
 <style>
+.fa {
+  line-height: 3rem;
+  color: white;
+  padding-right: 1rem;
+  display: inline-block;
+}
+.header ul > li {
+  display: inline-block;
+}
 .container
 {
   margin: 0;
