@@ -14,6 +14,11 @@ router.get('/mediumposts', async (req, res, next) => {
   res.json({posts: currentPosts});
 });
 
+router.get('/mediumpost/:id', async (req, res, next) => {
+  let post = await MediumPosts.findOne({ where: { id: req.params.id }});
+  res.json({post});
+});
+
 router.get('/collatemediumposts', async (req, res, next) => {
 
   let currentPosts = await MediumPosts.findAll({});
@@ -55,6 +60,14 @@ router.get('/collatemediumposts', async (req, res, next) => {
         wordCount: post.virtuals.wordCount,
         tags: post.virtuals.tags,
       });
+    } else {
+      let pst = await MediumPosts.findOne({ where:
+        { id: post.id }
+      });
+      pst.set({
+        virtuals: post.virtuals,
+        totalClapCount: post.virtuals.totalClapCount,
+      }).save();
     }
 
   }

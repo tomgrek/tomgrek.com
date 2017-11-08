@@ -59,6 +59,34 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-device-width: 600px) {
+  .container {
+    font-size: 13px !important;
+    padding: 0 !important;
+    letter-spacing: normal !important;
+  }
+  .main {
+    max-width: 73vw;
+    width: auto;
+  }
+  .sidebar {
+    padding-left: 0.25rem !important;
+    font-size: 12px !important;
+    min-width: 16vw !important;
+    max-width: 20vw !important;
+    width: auto !important;
+    white-space: nowrap;
+  }
+  .sidelinks li > a > i {
+    padding-right: 0.25rem !important;
+  }
+}
+@media only screen and (max-device-width: 768px) and (min-device-width: 768px) {
+  .main {
+    max-width: 71vw;
+  }
+}
+
 .fa {
   line-height: 3rem;
   color: white;
@@ -85,7 +113,6 @@ export default {
   color: #35495e;
   display: inline-block;
   width: 16vw;
-  height: 90vh;
   overflow: hidden;
   text-align: left;
   padding: 0 0 1rem 1rem;
