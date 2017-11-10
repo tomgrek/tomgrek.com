@@ -9,9 +9,11 @@
         <i class="fa fa-database" aria-hidden="true" style="color: inherit; line-height: inherit;"></i>
         Jupyter NB</a></li>
       <li><nuxt-link to="/about">About</nuxt-link></li>
-      <li><nuxt-link to="/TIL">TIL</nuxt-link></li>
       <li><nuxt-link to="/posts">Long Form</nuxt-link></li>
-      <li v-for="tag in hashtags" class="tag">
+      <li><nuxt-link to="/posts">Notebooks</nuxt-link></li>
+      <li v-for="notebook in notebooks" class="nb"><nuxt-link :to="`${notebook}.html`.replace(/ /g, '_')">{{notebook}}</nuxt-link></li>
+      <li><nuxt-link to="/TIL">TIL</nuxt-link></li>
+      <li v-for="tag in hashtags" class="tag capitalize">
         <nuxt-link :to="`/tag/${tag.tag}`">{{tag.tag}}</nuxt-link>
       </li>
     </ul>
@@ -27,6 +29,7 @@ export default {
     return {
       hashtags: [],
       posttags: [],
+      notebooks: [],
     };
   },
   async mounted() {
@@ -37,6 +40,8 @@ export default {
       if (a > b) return 1; if (a < b) return -1;
       return 0;
     });
+    let notebooks = await axios.get('/api/notebooks');
+    this.notebooks = notebooks.data.notebooks;
     let posts = await axios.get('/api/mediumposts');
     if (!posts.data || !posts.data.map) return;
     let posttags = posts.data.map(x => {
@@ -68,6 +73,15 @@ ul > li {
 .sidelinks .tag {
   font-size: 0.8rem;
   line-height: 1.2rem;
+}
+.nb {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  text-transform: capitalize;
+  color: #35495e !important;
+}
+.nb a {
+  color: #35495e !important;
 }
 .sidelinks .tag a, .sidelinks.tag a:visited {
   color: #35495e !important;

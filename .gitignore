@@ -14,3 +14,7 @@ dist
 build
 
 assets/config.js
+*.ipynb
+.ipynb_checkpoints
+
+static/*.html
