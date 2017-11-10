@@ -10,7 +10,10 @@
         Jupyter NB</a></li>
       <li><nuxt-link to="/about">About</nuxt-link></li>
       <li><nuxt-link to="/posts">Long Form</nuxt-link></li>
-      <li><nuxt-link to="/posts">Notebooks</nuxt-link></li>
+      <li v-for="post in posts" class="tag capitalize">
+        <nuxt-link :to="`/post/${post.id}`">{{post.title}}</nuxt-link>
+      </li>
+      <li>Notebooks</li>
       <li v-for="notebook in notebooks" class="nb"><nuxt-link target="_blank" :to="`${notebook}.html`.replace(/ /g, '_')">{{notebook}}</nuxt-link></li>
       <li><nuxt-link to="/TIL">TIL</nuxt-link></li>
       <li v-for="tag in hashtags" class="tag capitalize">
@@ -30,6 +33,7 @@ export default {
       hashtags: [],
       posttags: [],
       notebooks: [],
+      posts: [],
     };
   },
   async mounted() {
@@ -43,6 +47,7 @@ export default {
     let notebooks = await axios.get('/api/notebooks');
     this.notebooks = notebooks.data.notebooks;
     let posts = await axios.get('/api/mediumposts');
+    this.posts = posts.data.posts;
     if (!posts.data || !posts.data.map) return;
     let posttags = posts.data.map(x => {
       return x.tags;
@@ -82,6 +87,9 @@ ul > li {
 }
 .nb a {
   color: #35495e !important;
+}
+.sidelinks li {
+  color: #1585a1 !important;
 }
 .sidelinks .tag a, .sidelinks.tag a:visited {
   color: #35495e !important;
