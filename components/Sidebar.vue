@@ -11,7 +11,7 @@
       <li><nuxt-link to="/about">About</nuxt-link></li>
       <li><nuxt-link to="/posts">Long Form</nuxt-link></li>
       <li><nuxt-link to="/posts">Notebooks</nuxt-link></li>
-      <li v-for="notebook in notebooks" class="nb"><nuxt-link :to="`${notebook}.html`.replace(/ /g, '_')">{{notebook}}</nuxt-link></li>
+      <li v-for="notebook in notebooks" class="nb"><nuxt-link target="_blank" :to="`${notebook}.html`.replace(/ /g, '_')">{{notebook}}</nuxt-link></li>
       <li><nuxt-link to="/TIL">TIL</nuxt-link></li>
       <li v-for="tag in hashtags" class="tag capitalize">
         <nuxt-link :to="`/tag/${tag.tag}`">{{tag.tag}}</nuxt-link>
