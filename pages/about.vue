@@ -4,21 +4,19 @@
     <h1>Tom Grek</h1>
     <h2>Oh.</h2>
     <h2>You wanted to know more.</h2>
-    <h2>You took the red pill.</h2>
     <h2>The rabbit hole goes deep...</h2>
-    <h1 style="margin-top: 1rem;">tomgrek, can you describe your good self please.</h1>
+    <h1 style="margin-top: 3rem;">tomgrek, can you describe your good self please.</h1>
     <p>
       I'd like to call myself an engineer's engineer; learned programming on the legendary
       C64, then various BASICs on the Amiga, then C on PC, then ASM (on embedded platforms
-      (PIC!) and x86) then CPP then Matlab. Then later, Java, Javascript and Python.
+      (PIC!) and x86) then CPP then Matlab and VHDL (oof!). Then later, Java, PHP, Javascript and Python.
     </p>
     <p>
-      That sucks as a description of me, I'll try harder. I didn't want to study coding
-      at university because I have always wanted to know the whole shizzness, from
-      how logic gates are made from transistors, to what a Bloom filter is.
-    </p>
-    <p>
-      I remain, relentlessly, a hardware guy. It's fact that HW peeps are more fun.
+      That sucks as a description of me, I'll try harder. I didn't want to study computer
+      science at university because I need to know the basics from the ground up,
+      beginning with how transistors are made to handle high-frequency signals. I remain,
+      relentlessly, a hardware guy, maker, and advocate for that. I love
+      making crazy, useless inventions with Arduino, ESP8266/32, Raspberry Pi, etc.
     </p>
     <p>
       After getting my Masters in electronic engineering I took an alternate career path
@@ -28,12 +26,37 @@
       we advance, as humanity. Innovation has won or will win vs <i>the system</i>.
     </p>
     <p>
-      My particular interests in engineering are: logic and reasoning in AI (combined
-      with natural language processing). I want to bring about the singularity.
+      My particular interests in software are: logic and reasoning in AI (combined
+      with natural language processing). I want to bring about the singularity. But I also
+      like making fun, pretty things.
     </p>
-
-    <h1 style="margin-top: 1rem;">Random</h1>
-
+    <p>
+      At home, I live a very silly life with my wonderful wife Shamala and her three-legged cat.
+      (I'm a dog person and used to have a pug, which I think would be my spirit animal too.)
+    </p>
+    <h1 style="margin-top: 1rem;">Interests outside tech</h1>
+    <ul>
+      <li>Nature walks. Slow, mindful ones, not hiking! Also camping.</li>
+      <li>Coffee, wine, beer</li>
+      <li>Electronic music (I used to DJ... badly)</li>
+      <li>Fantasy literature and film (favorite book: Jonathan Strange & Mr Norrell)</li>
+      <li>RPG video games</li>
+    </ul>
+    <h1 style="margin-top: 1rem;">Places I've lived</h1>
+      <p>I enjoy traveling and new experiences!</p>
+      <ul>
+        <li>Liverpool, UK (born)</li>
+        <li>London, UK (college and work)</li>
+        <li>The English countryside (worked for the real-life James Bond "Q" organization)</li>
+        <li>Hong Kong</li>
+        <li>Bangkok, Thailand</li>
+        <li>Silicon Valley (now settled!)</li>
+      </ul>
+      <p>Honorable mentions to!</p>
+      <ul>
+        <li>China - visited often; while in Hong Kong, Shenzhen was my second home.</li>
+        <li>Vietnam. Never lived, but spent many weeks off-and-on with work.</li>
+      </ul>
   </div>
 </template>
 

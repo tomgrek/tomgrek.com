@@ -18,3 +18,4 @@ assets/config.js
 .ipynb_checkpoints
 
 static/*.html
+*.db

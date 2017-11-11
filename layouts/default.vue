@@ -80,6 +80,15 @@ export default {
   .sidelinks li > a > i {
     padding-right: 0.25rem !important;
   }
+  h2 {
+    padding: 0.2rem 0 !important;
+  }
+  h1 {
+    margin-top: 0.5rem !important;
+  }
+  img {
+    max-width: 50vw !important;
+  }
 }
 @media only screen and (max-device-width: 768px) and (min-device-width: 768px) {
   .main {

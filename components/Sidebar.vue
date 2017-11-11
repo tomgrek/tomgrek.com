@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 ul {
   padding-top: 0;
   -webkit-padding-start: 0;
@@ -70,6 +70,7 @@ ul {
 ul > li {
   list-style: none;
   line-height: 2rem;
+  padding-bottom: 0.25rem;
 }
 .sidelinks li > a, .sidelinks li > a:visited {
   text-decoration: none;
