@@ -9,6 +9,7 @@
         <i class="fa fa-database" aria-hidden="true" style="color: inherit; line-height: inherit;"></i>
         Jupyter NB</a></li>
       <li><nuxt-link to="/about">About</nuxt-link></li>
+      <li><nuxt-link to="/projects">Projects</nuxt-link></li>
       <li><nuxt-link to="/posts">Long Form</nuxt-link></li>
       <li v-for="post in posts" class="tag capitalize">
         <nuxt-link :to="`/post/${post.id}`">{{post.title}}</nuxt-link>
